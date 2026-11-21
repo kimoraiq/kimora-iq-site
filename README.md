@@ -1,3 +1,12 @@
-# KIMORA IQ Public Website
+# KIMORA IQ — Public Website
 
-This repository hosts the public-facing website. It does not contain private Supabase configuration or database records.
+Official bilingual English–Arabic static website for KIMORA IQ, a chemicals and water-treatment company.
+
+The source design is maintained in the private `kimoraiq/kimoraiq` repository; this public repository contains deployable website files only. The contact form requires a separately configured Supabase project and secure anti-abuse safeguards.
+
+## Hosting
+GitHub Pages can publish this repository from `main` / `root` in **Settings → Pages**.
+
+Live URL after GitHub Pages is enabled: https://kimoraiq.github.io/kimora-iq-site/
+
+No private secrets, service role keys, SQL database schemas, or customer records are stored in this repository.
