@@ -3,6 +3,9 @@
 (function(){
 "use strict";
 const translations = {
+  "Email": "البريد الإلكتروني",
+  "Send us an email": "راسلنا عبر البريد الإلكتروني",
+  "Send email to info@kimoraiq.com": "إرسال بريد إلكتروني إلى info@kimoraiq.com",
   "DIRECT CONTACT": "تواصل مباشر",
   "Connect with us directly.": "تواصل معنا مباشرة.",
   "Send a quick message or call our team.": "أرسل رسالة سريعة أو اتصل بفريقنا.",

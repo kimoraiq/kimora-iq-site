@@ -55,3 +55,24 @@ html[dir=rtl] .contact-channel strong{font-family:"Manrope",Arial,sans-serif}
 @media(max-width:980px){.contact-newhero-grid{grid-template-columns:1fr .45fr;gap:22px}.contact-channel{padding:23px 18px;gap:14px}.contact-channel strong{font-size:25px}.contact-section-new .contact-layout{gap:40px}}
 @media(max-width:720px){.contact-newhero{padding:68px 0 125px}.contact-newhero-grid{grid-template-columns:1fr;gap:0}.contact-newhero h1{font-size:clamp(45px,9.5vw,65px)}.contact-hero-aside{display:none}.contact-channel-wrap{margin-top:-85px}.contact-channel-grid{grid-template-columns:1fr;gap:12px}.contact-channel{min-height:116px;padding:22px 20px;border-radius:14px}.contact-channel strong{font-size:27px}.contact-channel-intro{display:none}.contact-section-new{padding-top:74px}.contact-section-new .contact-layout{grid-template-columns:1fr;gap:36px}.contact-section-new .contact-copy{padding-top:0}.contact-section-new .form-card{padding:29px 25px}}
 @media(max-width:440px){.contact-newhero h1{font-size:43px}.contact-channel-icon{width:47px;height:47px}.contact-channel-icon svg{width:24px;height:24px}.contact-channel strong{font-size:clamp(21px,6vw,27px)}.contact-channel-arrow{width:31px;height:31px}.contact-section-new .form-card{padding:22px 20px}.contact-section-new .form-row{grid-template-columns:1fr}.contact-section-new .contact-copy .block-title{font-size:35px}}
+
+/* Business email channel with balanced three-card layout */
+.contact-channel-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.contact-channel{padding:23px 19px;gap:13px;min-height:148px}
+.contact-channel-icon{width:50px;height:50px}
+.contact-channel-arrow{width:33px;height:33px}
+.contact-channel strong{font-size:clamp(20px,2.05vw,29px)}
+.contact-channel-email .contact-channel-icon{background:#ecf2fe;color:#316ca0}
+.contact-channel-email strong{font-size:clamp(16px,1.55vw,21px);overflow-wrap:anywhere;letter-spacing:-.035em}
+@media(max-width:1120px){
+ .contact-channel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .contact-channel-email{grid-column:1/-1}
+ .contact-channel-email strong{font-size:clamp(20px,2.8vw,28px)}
+}
+@media(max-width:720px){
+ .contact-channel-grid{grid-template-columns:1fr}
+ .contact-channel-email{grid-column:auto}
+ .contact-channel{min-height:116px;padding:22px 20px}
+ .contact-channel strong{font-size:26px}
+ .contact-channel-email strong{font-size:clamp(19px,5vw,25px)}
+}
