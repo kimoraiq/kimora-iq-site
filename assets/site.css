@@ -646,3 +646,137 @@ html[dir=rtl] .hero-water .hero-copy>p{
   .hero-water .hero-foot{min-height:54px;font-size:9px}
   .hero-water-media img{object-position:62% center}
 }
+
+
+/* ---------------------------------------------------------------
+   KIMORA IQ — compact, consistent hero proportions (all pages)
+   Applied after the existing design so mobile/RTL use one scale.
+   --------------------------------------------------------------- */
+:root{
+  --hero-heading:clamp(43px,4.5vw,62px);
+  --hero-copy-size:15px;
+}
+/* Home: keep signature water image without the oversized first screen. */
+.hero-water .hero-grid{min-height:clamp(475px,57svh,590px)}
+.hero-water .hero-copy{
+  max-width:740px;
+  padding-block:clamp(58px,6.3vw,88px) clamp(52px,6vw,82px);
+}
+.hero-water h1{
+  font-size:var(--hero-heading);
+  line-height:1.17;
+  max-width:735px;
+}
+.hero-water .section-tag{margin-bottom:22px}
+.hero-water .hero-copy>p{
+  font-size:var(--hero-copy-size);
+  max-width:520px;
+  line-height:1.8;
+  margin-top:20px;
+}
+.hero-water .hero-actions{margin-top:26px;gap:26px}
+.hero-water .hero-proof{margin-top:36px}
+.hero-water .hero-foot{min-height:52px}
+html[dir=rtl] .hero-water h1{
+  font-size:clamp(40px,4.25vw,58px);
+  line-height:1.43;
+}
+html[dir=rtl] .hero-water .hero-copy>p{line-height:1.91}
+
+/* Company: tighten the headline, illustration, and outer spacing. */
+.interior-hero{padding-block:clamp(50px,6.1vw,79px)}
+.interior-grid{
+  grid-template-columns:minmax(0,1.23fr) minmax(0,.77fr);
+  gap:clamp(24px,4vw,58px);
+}
+.interior-hero h1{
+  font-size:var(--hero-heading);
+  line-height:1.19;
+  max-width:690px;
+  margin:16px 0 20px;
+}
+.interior-hero p{
+  font-size:var(--hero-copy-size);
+  max-width:540px;
+  line-height:1.83;
+}
+.interior-visual{min-height:225px}
+.interior-visual-circle{width:208px;height:208px;gap:7px}
+.interior-visual-circle>span{font-size:74px}
+.interior-visual-circle small{font-size:9px;max-width:170px}
+html[dir=rtl] .interior-hero h1{
+  font-size:clamp(40px,4.3vw,58px);
+  line-height:1.42;
+}
+
+/* Contact: preserve the overlapping contact cards but reduce blank space. */
+.contact-head{padding-block:clamp(53px,6.2vw,83px) clamp(92px,8.1vw,110px)}
+.contact-hero-grid{gap:clamp(27px,4.2vw,65px)}
+.contact-head h1{
+  font-size:var(--hero-heading);
+  line-height:1.19;
+  max-width:720px;
+  margin:16px 0 20px;
+}
+.contact-head p{font-size:var(--hero-copy-size);line-height:1.84;max-width:530px}
+.contact-head-side strong{font-size:clamp(17px,1.85vw,23px)}
+.contact-options{margin-top:-54px}
+html[dir=rtl] .contact-head h1{
+  font-size:clamp(40px,4.3vw,58px);
+  line-height:1.42;
+}
+
+/* Product page intentionally has no giant hero; lessen its top whitespace. */
+.gallery-page{padding-top:clamp(24px,3.3vw,43px)}
+
+@media(max-width:980px){
+  .hero-water .hero-grid{min-height:clamp(445px,54svh,545px)}
+  .hero-water .hero-copy{padding-block:63px 62px}
+  .hero-water h1{font-size:clamp(41px,5vw,56px)}
+  .hero-water .hero-proof{margin-top:32px}
+  .interior-hero{padding-block:59px 66px}
+  .interior-hero h1,.contact-head h1{font-size:clamp(41px,4.9vw,55px)}
+  .interior-visual{min-height:205px}
+  .interior-visual-circle{width:190px;height:190px}
+  .contact-head{padding-block:59px 102px}
+}
+@media(max-width:760px){
+  .hero-water .hero-grid{min-height:0}
+  .hero-water .hero-copy{
+    max-width:100%;
+    padding-block:65px 64px;
+  }
+  .hero-water h1{font-size:clamp(38px,6.4vw,49px)}
+  html[dir=rtl] .hero-water h1{font-size:clamp(35px,6.2vw,47px);line-height:1.44}
+  .hero-water .section-tag{margin-bottom:17px}
+  .hero-water .hero-copy>p{font-size:14px;margin-top:18px;max-width:475px}
+  .hero-water .hero-actions{margin-top:23px}
+  .hero-water .hero-proof{margin-top:30px}
+  .interior-hero{padding-block:59px 66px}
+  .interior-grid{grid-template-columns:1fr;gap:0}
+  .interior-visual{display:none}
+  .interior-hero h1,.contact-head h1{font-size:clamp(38px,6.1vw,49px)}
+  html[dir=rtl] .interior-hero h1,html[dir=rtl] .contact-head h1{
+    font-size:clamp(35px,5.9vw,46px);
+    line-height:1.43;
+  }
+  .interior-hero p,.contact-head p{font-size:14px;line-height:1.85}
+  .contact-head{padding-block:57px 96px}
+  .contact-options{margin-top:-48px}
+}
+@media(max-width:490px){
+  .hero-water .hero-copy{padding-block:49px 55px}
+  .hero-water h1{font-size:clamp(34px,8.4vw,42px);line-height:1.21}
+  html[dir=rtl] .hero-water h1{font-size:clamp(33px,8vw,40px);line-height:1.45}
+  .hero-water .section-tag{margin-bottom:15px}
+  .hero-water .hero-copy>p{font-size:14px;line-height:1.81;margin-top:16px}
+  .hero-water .hero-actions{margin-top:21px;gap:13px}
+  .hero-water .hero-proof{margin-top:27px}
+  .hero-water .hero-foot{min-height:45px}
+  .interior-hero{padding-block:46px 51px}
+  .interior-hero h1,.contact-head h1{font-size:clamp(34px,8.3vw,41px);margin:13px 0 16px}
+  html[dir=rtl] .interior-hero h1,html[dir=rtl] .contact-head h1{font-size:clamp(33px,8vw,40px)}
+  .contact-head{padding-block:47px 87px}
+  .contact-options{margin-top:-43px}
+  .gallery-page{padding-top:21px}
+}
