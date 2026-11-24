@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071c29">
+<meta name="robots" content="noindex,nofollow"><title>لوحة الإدارة | KIMORA IQ</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/admin.css">
+<script defer src="assets/supabase-config.js"></script><script defer src="assets/admin.js"></script>
+</head>
+<body>
+<header class="admin-topbar"><a href="index.html" class="admin-brand"><strong>KIMORA <span>IQ</span></strong><small>ADMIN CONSOLE</small></a><div class="admin-toplinks"><a href="index.html">عرض الموقع</a><button type="button" id="signOut" hidden>تسجيل الخروج</button></div></header>
+<main>
+<section class="admin-auth-wrap" id="loginPane">
+ <div class="admin-auth-panel">
+  <span class="admin-overline">KIMORA IQ / PRIVATE ACCESS</span>
+  <h1>مرحبًا بك في لوحة الإدارة</h1>
+  <p>سجّل دخولك بحساب الأدمن المصرّح له لعرض استفسارات الموقع ومتابعة الرسائل.</p>
+  <form id="loginForm"><label>البريد الإلكتروني<input type="email" id="adminEmail" autocomplete="username" placeholder="admin@company.com" required></label>
+  <label>كلمة المرور<input type="password" id="adminPassword" autocomplete="current-password" placeholder="••••••••" required></label>
+  <button id="loginButton" class="admin-button admin-button-primary" type="submit">دخول لوحة التحكم <span>←</span></button></form>
+  <p class="admin-feedback" id="loginMessage" role="alert" aria-live="polite"></p>
+  <p class="admin-auth-note">هذه اللوحة مخصصة للمسؤولين فقط، ولا تظهر رسائل العملاء إلا للحسابات المعتمدة.</p>
+ </div><div class="admin-auth-visual" aria-hidden="true"><div class="admin-auth-orbit"></div><div class="admin-auth-monogram">K<span>IQ</span></div><span>SECURE COMMUNICATIONS</span></div>
+</section>
+<section class="admin-workspace" id="dashboardPane" hidden>
+ <div class="admin-workspace-inner">
+  <div class="admin-heading"><div><span class="admin-overline">KIMORA IQ / INBOX</span><h1>إدارة استفسارات العملاء</h1><p>كل الرسائل المرسلة من نموذج «اتصل بنا» بمكان واحد.</p></div><div class="admin-actions"><span class="admin-sync" id="lastUpdated"></span><button class="admin-button admin-button-outline" type="button" id="refreshButton">تحديث الرسائل ↻</button></div></div>
+  <div class="admin-stats">
+   <div class="admin-stat"><span>إجمالي الرسائل</span><strong id="countAll">0</strong></div>
+   <div class="admin-stat"><span>رسائل جديدة</span><strong id="countNew">0</strong></div>
+   <div class="admin-stat"><span>قيد المتابعة</span><strong id="countProgress">0</strong></div>
+   <div class="admin-stat"><span>مكتملة</span><strong id="countResolved">0</strong></div>
+  </div>
+  <div class="admin-inbox-bar"><div><span class="admin-overline">INBOX</span><h2>صندوق الرسائل</h2></div><div class="admin-inbox-controls"><label class="admin-search-label"><span class="sr-only">البحث</span><input id="searchInput" type="search" placeholder="ابحث بالاسم أو البريد أو الرسالة…" autocomplete="off"></label><select id="statusFilter" aria-label="تصفية حسب الحالة"><option value="all">جميع الحالات</option><option value="new">جديدة</option><option value="in_progress">قيد المتابعة</option><option value="resolved">مكتملة</option></select></div></div>
+  <p class="admin-feedback" id="dashboardMessage" role="status" aria-live="polite"></p>
+  <div class="admin-inbox-grid">
+   <div class="admin-message-list" id="messageList" role="list" aria-label="رسائل العملاء"></div>
+   <section class="admin-detail" aria-label="تفاصيل الرسالة" id="detailPane">
+     <div class="admin-detail-empty" id="detailEmpty"><span class="admin-detail-empty-icon">✉</span><h3>اختر رسالة لعرض تفاصيلها</h3><p>اضغط على أي رسالة من القائمة حتى تشوف النص الكامل ومعلومات المرسل.</p></div>
+     <div id="detailContent" hidden>
+       <div class="admin-detail-top"><span id="detailStatus" class="admin-status"></span><span id="detailTime"></span></div>
+       <h3 id="detailName"></h3><div class="admin-detail-meta"><div><span>البريد الإلكتروني</span><a id="detailEmail" dir="ltr"></a></div><div><span>الشركة</span><strong id="detailCompany"></strong></div><div><span>نوع الاستفسار</span><strong id="detailService"></strong></div></div>
+       <div class="admin-message-body"><span>نص الرسالة</span><p id="detailMessage"></p></div>
+       <div class="admin-detail-actions"><a id="replyEmail" class="admin-button admin-button-primary">الرد عبر البريد الإلكتروني ↗</a><div class="admin-status-controls"><label for="statusSelect">حالة الرسالة</label><select id="statusSelect"><option value="new">جديدة</option><option value="in_progress">قيد المتابعة</option><option value="resolved">مكتملة</option></select><button id="saveStatus" class="admin-button admin-button-outline" type="button">حفظ الحالة</button></div></div>
+     </div>
+   </section>
+  </div>
+ </div>
+</section>
+</main>
+</body></html>

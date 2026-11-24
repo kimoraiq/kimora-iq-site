@@ -84,7 +84,7 @@ if(form&&status){
   const submit=form.querySelector('button[type="submit"]');
   submit.disabled=true;submit.setAttribute("aria-busy","true");
   try{
-   const response=await fetch(config.url.replace(/\/$/,"")+"/rest/v1/inquiries",{method:"POST",headers:{"apikey":config.anonKey,"Authorization":"Bearer "+config.anonKey,"Content-Type":"application/json","Prefer":"return=minimal"},body:JSON.stringify(payload)});
+   const response=await fetch(config.url.replace(/\/$/,"")+"/rest/v1/inquiries",{method:"POST",headers:{"apikey":config.anonKey,"Content-Type":"application/json","Prefer":"return=minimal"},body:JSON.stringify(payload)});
    if(!response.ok)throw new Error("Request failed");
    form.reset();show("Thank you. Your message has been submitted successfully.",true);
   }catch(_error){show("Your message could not be sent right now. Please try again later.",false);}

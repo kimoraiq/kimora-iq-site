@@ -3,6 +3,16 @@
 (function(){
 "use strict";
 const translations = {
+  "DIRECT CONTACT": "تواصل مباشر",
+  "Connect with us directly.": "تواصل معنا مباشرة.",
+  "Send a quick message or call our team.": "أرسل رسالة سريعة أو اتصل بفريقنا.",
+  "WhatsApp": "واتساب",
+  "Message us on WhatsApp": "راسلنا عبر واتساب",
+  "Phone Call": "اتصال هاتفي",
+  "Call our team directly": "اتصل بفريقنا مباشرة",
+  "Let's start a conversation.": "لنبدأ بالتواصل.",
+  "01 / INQUIRY": "01 / استفسار",
+  "KIMORA / IRAQ": "كيمورا / العراق",
   "ABOUT KIMORA IRAQ": "عن كيمورا العراق",
   "Rooted in expertise.": "جذورنا خبرة راسخة.",
   "Driven by progress.": "وطموحنا صناعة التقدّم.",
