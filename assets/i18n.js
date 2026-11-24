@@ -3,6 +3,16 @@
 (function(){
 "use strict";
 const translations = {
+  "STORAGE & LOGISTICS": "التخزين والخدمات اللوجستية",
+  "Storage and distribution.": "التخزين والتوزيع.",
+  "Illustrative views of industrial warehousing and logistics environments.": "مشاهد توضيحية لبيئات التخزين الصناعي والخدمات اللوجستية.",
+  "Warehouse Storage": "التخزين في المخازن",
+  "Warehouse Handling": "عمليات المناولة في المخازن",
+  "Inventory & Distribution": "المخزون والتوزيع",
+  "Illustrative stock photography only — these are not photos of KIMORA IQ's actual warehouses.": "صور توضيحية فقط، وليست صورًا فعلية لمخازن كيمورا.",
+  "Illustrative photograph of a warehouse storage area.": "صورة توضيحية لمنطقة تخزين في مخزن.",
+  "Illustrative photograph of warehouse material handling.": "صورة توضيحية لمناولة المواد داخل مخزن.",
+  "Illustrative photograph of palletized warehouse inventory.": "صورة توضيحية لمخزون مخزن على منصات تحميل.",
   "Email": "البريد الإلكتروني",
   "Send us an email": "راسلنا عبر البريد الإلكتروني",
   "Send email to info@kimoraiq.com": "إرسال بريد إلكتروني إلى info@kimoraiq.com",

@@ -22,10 +22,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Set up Python for image optimization
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned image optimizer
+        run: python -m pip install --disable-pip-version-check Pillow==11.3.0
+      - name: Prepare lightweight site (30 WebP files capped at 350KB)
+        run: python scripts/prepare_site.py
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: _site
 
   deploy:
     needs: build
