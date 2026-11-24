@@ -80,3 +80,30 @@ button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:wa
 @media(max-width:1050px){.admin-workspace-inner{width:calc(100% - 44px)}.admin-inbox-grid{grid-template-columns:minmax(280px,.95fr) minmax(0,1.1fr)}.admin-message-item{padding:20px}.admin-stats{gap:10px}.admin-stat{padding:22px}}
 @media(max-width:800px){.admin-auth-wrap{grid-template-columns:1fr;max-width:550px}.admin-auth-visual{display:none}.admin-workspace-inner{padding-top:35px}.admin-heading{align-items:start;flex-direction:column}.admin-stats{grid-template-columns:1fr 1fr}.admin-inbox-grid{grid-template-columns:1fr}.admin-message-list{max-height:370px;min-height:100px}.admin-detail{min-height:350px}.admin-detail-empty{min-height:280px}}
 @media(max-width:500px){.admin-topbar{height:70px;padding:0 17px}.admin-brand strong{font-size:20px}.admin-toplinks{gap:8px}.admin-toplinks a,.admin-toplinks button{font-size:11px}.admin-auth-wrap{width:calc(100% - 26px);margin:26px auto;min-height:0}.admin-auth-panel{padding:26px 23px}.admin-workspace-inner{width:calc(100% - 26px);padding-top:27px}.admin-heading h1{font-size:29px}.admin-actions{width:100%;justify-content:space-between}.admin-stat{padding:18px}.admin-stat span{font-size:12px}.admin-stat strong{font-size:31px}.admin-inbox-bar{align-items:stretch;flex-direction:column}.admin-inbox-controls{display:grid;grid-template-columns:1fr auto}.admin-inbox-controls input{width:100%}.admin-inbox-controls select{max-width:148px}.admin-message-item{padding:18px}.admin-detail{padding:21px}.admin-detail-meta{grid-template-columns:1fr}.admin-detail-actions>a{width:100%}.admin-status-controls{display:grid;grid-template-columns:1fr 1fr}.admin-status-controls label{grid-column:1/-1}.admin-status-controls .admin-button{padding:10px}}
+
+
+/* Final admin layout pass — same measured spacing as the public site. */
+.admin-workspace-inner{max-width:1300px}
+.admin-heading{margin-bottom:27px}
+.admin-heading h1{line-height:1.3}
+.admin-stats{gap:13px;margin-bottom:32px}
+.admin-stat{min-height:133px;justify-content:space-between}
+.admin-inbox-bar{margin-bottom:18px}
+.admin-inbox-grid{grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr);gap:16px}
+.admin-message-item{min-height:120px}
+.admin-detail{min-width:0}
+.admin-detail-meta>div{min-width:0}
+@media(max-width:900px){
+ .admin-workspace-inner{width:calc(100% - 42px)}
+ .admin-inbox-grid{grid-template-columns:1fr}
+ .admin-message-list{min-height:120px;max-height:365px}
+ .admin-detail{min-height:325px}
+}
+@media(max-width:540px){
+ .admin-workspace-inner{width:calc(100% - 26px)}
+ .admin-stat{min-height:100px;padding:18px}
+ .admin-stats{gap:9px}
+ .admin-inbox-controls{width:100%}
+ .admin-inbox-controls input{min-width:0}
+ .admin-message-item{min-height:102px}
+}
