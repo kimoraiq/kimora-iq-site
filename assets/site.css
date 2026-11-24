@@ -462,3 +462,187 @@ html[dir=rtl] .viewer-bottom{direction:rtl}
  .footer-lower{flex-direction:column;gap:10px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+
+/* ---------------------------------------------------------------
+   KIMORA IQ / Signature water hero
+   Restored full-bleed treatment-facility photography inside the
+   redesigned corporate identity; calm contrasts, no overlays/popups.
+   --------------------------------------------------------------- */
+.hero.hero-water{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  color:#fff;
+  background:#082a3b;
+}
+.hero-water-media{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  overflow:hidden;
+  background:linear-gradient(120deg,#062a3a,#096a77);
+}
+.hero-water-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 54%;
+  filter:saturate(.87) contrast(1.075);
+}
+.hero-water-media:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(3,23,35,.96) 0%,rgba(4,30,43,.92) 23%,rgba(4,37,51,.79) 46%,rgba(5,42,54,.40) 75%,rgba(5,38,50,.24) 100%),
+    linear-gradient(0deg,rgba(2,22,33,.54),transparent 43%);
+}
+.hero.hero-water:after{
+  content:"";
+  position:absolute;
+  width:min(65vw,900px);
+  height:min(65vw,900px);
+  border-radius:50%;
+  border:1px solid rgba(179,236,223,.12);
+  inset-inline-end:-22%;
+  top:-51%;
+  pointer-events:none;
+  box-shadow:0 0 0 85px rgba(179,236,223,.018),0 0 0 180px rgba(179,236,223,.012);
+  z-index:-1;
+}
+.hero-water .hero-grid{
+  display:flex;
+  align-items:center;
+  min-height:clamp(680px,77svh,825px);
+  padding-block:0;
+}
+.hero-water .hero-copy{
+  position:relative;
+  z-index:1;
+  width:min(100%,850px);
+  padding-block:clamp(103px,12vw,175px) clamp(98px,10vw,142px);
+}
+.hero-water .section-tag{
+  color:#bfe7e0;
+  font-size:11px;
+  margin-bottom:clamp(27px,3vw,39px);
+}
+.hero-water .tag-mark{
+  background:#aedec9;
+  width:32px;
+}
+.hero-water h1{
+  color:#fff;
+  font-size:clamp(54px,5.85vw,87px);
+  font-weight:600;
+  max-width:885px;
+  letter-spacing:-.065em;
+  line-height:1.13;
+  text-shadow:0 5px 27px rgba(3,25,37,.2);
+}
+.hero-water h1 em{
+  color:#b2e8df;
+  font-style:normal;
+}
+.hero-water .hero-copy>p{
+  color:#d4e6e6;
+  font-size:clamp(16px,1.55vw,18px);
+  max-width:570px;
+  line-height:1.9;
+  margin-top:29px;
+}
+.hero-water .hero-actions{
+  margin-top:37px;
+  gap:clamp(19px,3vw,38px);
+}
+.hero-water .button.primary{
+  background:#c2e7db;
+  color:#123848;
+  border-color:#c2e7db;
+}
+.hero-water .button.primary:hover{
+  background:#e0f6ec;
+  border-color:#e0f6ec;
+}
+.hero-water .text-link{
+  color:#f0fbf9;
+}
+.hero-water .text-link svg{
+  color:#aee9da;
+}
+.hero-water .hero-proof{
+  color:#bad7d7;
+  margin-top:clamp(54px,6vw,85px);
+}
+.hero-water .proof-line{
+  background:#8ebbbb;
+}
+.hero-water .hero-foot{
+  position:relative;
+  z-index:1;
+  border-top:1px solid rgba(218,241,241,.23);
+  color:#c3dfe0;
+  min-height:62px;
+}
+.hero-water .hero-foot span{
+  color:inherit;
+}
+html[dir=rtl] .hero-water-media:after{
+  background:
+    linear-gradient(270deg,rgba(3,23,35,.96) 0%,rgba(4,30,43,.91) 23%,rgba(4,37,51,.79) 49%,rgba(5,42,54,.4) 75%,rgba(5,38,50,.24) 100%),
+    linear-gradient(0deg,rgba(2,22,33,.54),transparent 43%);
+}
+html[dir=rtl] .hero-water h1{
+  font-family:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;
+  font-size:clamp(48px,5.25vw,78px);
+  line-height:1.48;
+  letter-spacing:0;
+}
+html[dir=rtl] .hero-water .hero-copy>p{
+  line-height:2;
+}
+@media(max-width:980px){
+  .hero-water .hero-grid{min-height:clamp(610px,70svh,740px)}
+  .hero-water .hero-copy{padding-block:104px 100px}
+  .hero-water h1{font-size:clamp(51px,6.2vw,72px)}
+}
+@media(max-width:760px){
+  .hero-water .hero-grid{min-height:0}
+  .hero-water .hero-copy{
+    padding-top:clamp(97px,16vw,125px);
+    padding-bottom:clamp(100px,15vw,140px);
+  }
+  .hero-water h1{font-size:clamp(48px,8.5vw,67px);max-width:620px}
+  html[dir=rtl] .hero-water h1{font-size:clamp(42px,7.8vw,59px)}
+  .hero-water .hero-copy>p{font-size:16px;max-width:520px}
+  .hero-water .hero-proof{margin-top:59px}
+  .hero-water-media img{object-position:60% center}
+  .hero-water-media:after{
+    background:linear-gradient(90deg,rgba(3,23,35,.96) 0%,rgba(4,32,44,.86) 62%,rgba(4,35,49,.64) 100%),
+      linear-gradient(0deg,rgba(2,23,33,.55),transparent 65%);
+  }
+  html[dir=rtl] .hero-water-media:after{
+    background:linear-gradient(270deg,rgba(3,23,35,.96) 0%,rgba(4,32,44,.86) 62%,rgba(4,35,49,.64) 100%),
+      linear-gradient(0deg,rgba(2,23,33,.55),transparent 65%);
+  }
+}
+@media(max-width:490px){
+  .hero-water .hero-copy{
+    padding-top:90px;
+    padding-bottom:100px;
+  }
+  .hero-water h1{
+    font-size:clamp(41px,10.1vw,52px);
+    letter-spacing:-.053em;
+    line-height:1.19;
+  }
+  html[dir=rtl] .hero-water h1{font-size:clamp(37px,9vw,48px);line-height:1.47}
+  .hero-water .section-tag{font-size:9px;letter-spacing:.10em;margin-bottom:26px}
+  .hero-water .hero-copy>p{font-size:15px;line-height:1.85;margin-top:22px}
+  .hero-water .hero-actions{gap:19px;margin-top:28px}
+  .hero-water .hero-actions .button{width:100%}
+  .hero-water .hero-proof{margin-top:58px;font-size:10px}
+  .hero-water .hero-foot{min-height:54px;font-size:9px}
+  .hero-water-media img{object-position:62% center}
+}
