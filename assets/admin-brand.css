@@ -1,0 +1,21 @@
+/* Private admin shares KIMORA IQ's public visual identity. */
+body{background:#f4f7f5;color:#132b36;font-family:"IBM Plex Sans Arabic",Tahoma,sans-serif}
+.admin-topbar{background:#fff;border-bottom:1px solid #dce5e4;height:83px;padding-inline:clamp(20px,5.4vw,86px)}
+.admin-brand strong{font-family:"DM Sans",sans-serif;color:#102e3b}
+.admin-brand strong span{color:#0d8b9c}
+.admin-brand small{color:#62828a}
+.admin-toplinks a,.admin-toplinks button{color:#1a5464}
+.admin-auth-wrap{border-radius:10px;border-color:#dce6e5;box-shadow:0 22px 63px rgba(12,43,54,.075)}
+.admin-auth-panel h1,.admin-heading h1{color:#133543}
+.admin-overline{color:#0c8192}
+.admin-auth-visual{background:linear-gradient(125deg,#0b2837,#0e5964)}
+.admin-button{border-radius:5px}
+.admin-button-primary{background:#0e3948;color:#fff}
+.admin-button-primary:hover{background:#0a7180}
+.admin-button-outline{border-color:#d2e1e1;color:#12526a}
+.admin-stat{border-radius:8px;border-color:#dce7e5}
+.admin-stat:nth-child(2){background:#0e3948;border-color:#0e3948}
+.admin-stat:nth-child(2) strong{color:#b9e5d2}
+.admin-message-list,.admin-detail{border-radius:8px;border-color:#dae6e6}
+.admin-message-item.is-active{background:#edf6f3;border-inline-start-color:#1093a2}
+.admin-status-new{background:#eaf7ef;color:#217b53}
